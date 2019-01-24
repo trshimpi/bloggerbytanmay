@@ -1,0 +1,24 @@
+<% include partials/header %>
+    <div class="container">
+       
+            <h1 style="text-align:center;">CREATE A NEW BLOG-POST</h1>
+             <div  style="width:50% ; margin:025px auto;">
+                <form action="/blogs" method="POST">
+                    <div class="form-group">
+                        <input class="form-control" type="text" name="title" placeholder="title">
+                    </div>
+                    <div class="form-group">
+                        <input class="form-control" type="url" name="image" placeholder="image url">
+                    </div>
+                    <div class="form-group">
+                        <textarea class="form-control" name="post" placeholder="post goes here"></textarea>
+                    </div>
+                    <div class="form-group">
+                        <input class="form-control btn btn-primary" type="submit">
+                    </div>
+                </form>
+                
+            <a href="/blogs">GO BACK!!</a>
+           </div> 
+    </div>
+<% include partials/footer %>

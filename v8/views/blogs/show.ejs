@@ -1,0 +1,60 @@
+<% include ../partials/header %>
+<div class="container">
+    <div class="row">
+        <div class="col-md-3">
+            <p>BLOGGER</p>
+            
+            <div class="list-group">
+                <li class="list-group-item active">INFO 1</li>
+                <li class="list-group-item">INFO 2</li>
+                <li class="list-group-item">INFO 3</li>
+            </div>
+        </div>
+        <div class="col-md-9">
+            <div class="img-thumbnail">
+                <img class="card-image-top img-fluid" src="<%= blog.image %>">
+                <div class="card-body">
+                    <div class="card-title">
+                            <span class="float-right">created by,tanmay</span>
+                            <h1><a href="#"><%= blog.title %></a></h1>
+                    </div>
+                    <div class="card-text">
+                        <p><%= blog.post %></p>
+                    </div>
+                </div>
+            </div>
+            <br>
+            <div class="card  mb-3">
+                <div class="card-body">
+                    <div class="float-right">
+                    <a class="card-link btn btn-primary" href="/blogs/<%= blog._id %>/comments/new">ADD NEW COMMENT</a>
+                    </div><br><br><hr>
+                    <% blog.comments.forEach(function(comment){ %>
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="card-text">
+                                <strong><%= comment.author.username %></strong>
+                                <span class="float-right">10 dyas ago</span>
+                                <p> - <%= comment.text %> </p>
+                            </div>
+                        </div>
+                    </div>
+                    <% }) %>
+                </div>
+                
+            </div>
+        </div>
+    </div>
+</div>
+
+    
+    
+    
+    
+    
+    
+        
+    
+    
+
+<% include ../partials/footer %>

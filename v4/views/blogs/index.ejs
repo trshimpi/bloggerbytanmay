@@ -1,0 +1,33 @@
+<% include ../partials/header %>
+<div class="container">
+    <div>
+        <header class="jumbotron">
+        <div class="container">
+            <h1>Welcome to the ULTIMATE BlOgGeR</h1>
+            <a href="/blogs/new" class="btn btn-primary">add new blog</a>
+        </div>
+        </header>
+    </div>
+    <% blogs.forEach(function(blog){ %>
+        <div class="row" style="margin-bottom:5px;">  
+            <div class="col-sm-12 card"> 
+                <div class="row"> 
+                    <div class="col-sm-4" style="margin:10px opx;">
+                        <div class="thumbnail">
+                          <img class="card-img-top" src="<%= blog.image %>">
+                         </div>
+                    </div>
+                    <div class="col-sm-1"></div>
+                    <div class="col-sm-7 card-body"> 
+                            <h4>
+                                <%= blog.title %>
+                            </h4>
+                            <a href="/blogs/<%= blog._id%>" class="btn btn-primary">show more</a>
+                             
+                    </div>
+                </div>    
+            </div> 
+        </div> 
+    <% }); %>
+</div>
+<% include ../partials/footer %>

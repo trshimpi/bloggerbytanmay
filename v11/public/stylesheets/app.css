@@ -1,0 +1,29 @@
+img {
+   width:100%; 
+   height:100%;
+   border-radius:10px;
+}
+ #img-fix-index{
+     margin:10px 0px;
+ }
+ 
+ .delete-form{
+     display: inline;
+ }
+ 
+ body, html {
+  height: 100%;
+}
+
+ .big-banner{
+     background-image: url(https://cdn.pixabay.com/photo/2018/12/04/22/38/road-3856796__340.jpg);
+     
+  /* Full height */
+  height: 100%; 
+
+  /* Center and scale the image nicely */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+ }
